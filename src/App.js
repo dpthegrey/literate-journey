@@ -1,9 +1,15 @@
 import React from "react";
 
-const Star = () => React.createElement("div", null, "This is a little star");
+// Styles
+import { GlobalStyle } from "./GlobalStyle";
 
-const App = () => {
-  return Star();
-};
+function App() {
+  return (
+    <div className="App">
+      Start Here
+      <GlobalStyle />
+    </div>
+  );
+}
 
 export default App;
