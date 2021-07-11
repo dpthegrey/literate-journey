@@ -1,2 +1,2 @@
 # literate-journey
-React rmdb movie listing app using movie database api
+React tmdb movie listing app using movie database api
