@@ -16,7 +16,7 @@ import NoImage from "../images/no_image.jpg";
 
 const Movie = () => {
   const { movieId } = useParams();
-  console.log(movieId);
+  // console.log(movieId);
   const { state: movie, loading, error } = useMovieFetch(movieId);
 
   if (loading) {
@@ -39,7 +39,7 @@ const Movie = () => {
         {movie.actors.map((actor) => (
           <Actor
             key={actor.credit_id}
-            name={actor.name}
+            name={10}
             character={actor.character}
             imageUrl={
               actor.profile_path
