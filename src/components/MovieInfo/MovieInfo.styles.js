@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   padding: 40px 20px;
   animation: animateMovieInfo 1s;
 
-  @keyframes animateMovieInfo {
+  @keyframes {
     from {
       opacity: 0;
     }

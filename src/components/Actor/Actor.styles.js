@@ -6,9 +6,11 @@ export const Wrapper = styled.div`
   border-radius: 20px;
   padding: 5px;
   text-align: center;
+
   h3 {
     margin: 10px 0 0 0;
   }
+
   p {
     margin: 5px 0;
   }

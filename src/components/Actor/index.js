@@ -12,9 +12,9 @@ const Actor = ({ name, character, imageUrl }) => (
 );
 
 Actor.propTypes = {
-  name: PropTypes.string.isRequired,
-  character: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  character: PropTypes.string,
+  imageUrl: PropTypes.string,
 };
 
 export default Actor;

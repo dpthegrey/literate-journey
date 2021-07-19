@@ -13,6 +13,7 @@ export const Content = styled.div`
   max-width: var(--maxWidth);
   width: 100%;
   margin: 0 auto;
+
   .column {
     display: flex;
     align-items: center;
@@ -21,15 +22,19 @@ export const Content = styled.div`
     border-radius: 20px;
     margin: 0 20px;
     flex: 1;
+
     :first-child {
       margin-left: 0;
     }
+
     :last-child {
       margin-right: 0;
     }
   }
+
   @media screen and (max-width: 768px) {
     display: block;
+
     .column {
       margin: 20px 0;
     }

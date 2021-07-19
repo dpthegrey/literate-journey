@@ -6,7 +6,7 @@ import Thumb from "../Thumb";
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
 // Image
 import NoImage from "../../images/no_image.jpg";
-//Styles
+// Styles
 import { Wrapper, Content, Text } from "./MovieInfo.styles";
 
 const MovieInfo = ({ movie }) => (
@@ -19,9 +19,10 @@ const MovieInfo = ({ movie }) => (
             : NoImage
         }
         clickable={false}
-      ></Thumb>
+        alt="movie-thumb"
+      />
       <Text>
-        <h2>{movie.title}</h2>
+        <h1>{movie.title}</h1>
         <h3>PLOT</h3>
         <p>{movie.overview}</p>
 
@@ -43,7 +44,7 @@ const MovieInfo = ({ movie }) => (
 );
 
 MovieInfo.propTypes = {
-  movie: PropTypes.object.isRequired,
+  movie: PropTypes.object,
 };
 
 export default MovieInfo;

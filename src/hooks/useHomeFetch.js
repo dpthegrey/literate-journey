@@ -24,7 +24,6 @@ export const useHomeFetch = () => {
       setLoading(true);
 
       const movies = await API.fetchMovies(searchTerm, page);
-      // console.log(movies);
 
       setState((prev) => ({
         ...movies,
@@ -37,24 +36,23 @@ export const useHomeFetch = () => {
     setLoading(false);
   };
 
-  // Initial and search
+  // Search and initial
   useEffect(() => {
     if (!searchTerm) {
       const sessionState = isPersistedState("homeState");
 
       if (sessionState) {
-        console.log("Restoring home state from session");
+        console.log("Grabbing from sessionStorage");
         setState(sessionState);
         return;
       }
     }
-    console.log("Fetching movies from API");
-
+    console.log("Grabbing from API");
     setState(initialState);
     fetchMovies(1, searchTerm);
   }, [searchTerm]);
 
-  // Load more
+  // Load More
   useEffect(() => {
     if (!isLoadingMore) return;
 
