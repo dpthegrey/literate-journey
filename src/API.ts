@@ -58,7 +58,7 @@ export type Credits = {
   crew: Crew[];
 };
 
-export const API = {
+const apiSettings = {
   fetchMovies: async (searchTerm: string, page: number): Promise<Movies> => {
     const endpoint: string = searchTerm
       ? `${SEARCH_BASE_URL}${searchTerm}&page=${page}`
@@ -106,6 +106,18 @@ export const API = {
       return sessionId;
     }
   },
+  rateMovie: async (sessionId: string, movieId: string, value: number) => {
+    const endpoint: string = `${API_URL}movie/${movieId}/rating?api_key=${API_KEY}&session_id=${sessionId}`;
+
+    const rating = await (
+      await fetch(endpoint, {
+        ...defaultConfig,
+        body: JSON.stringify({ value }),
+      })
+    ).json();
+
+    return rating;
+  },
 };
 
-export default API;
+export default apiSettings;
