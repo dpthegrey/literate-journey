@@ -58,7 +58,7 @@ export type Credits = {
   crew: Crew[];
 };
 
-export default {
+export const API = {
   fetchMovies: async (searchTerm: string, page: number): Promise<Movies> => {
     const endpoint: string = searchTerm
       ? `${SEARCH_BASE_URL}${searchTerm}&page=${page}`
@@ -107,3 +107,5 @@ export default {
     }
   },
 };
+
+export default API;
