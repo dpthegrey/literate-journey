@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { IMAGE_BASE_URL, BACKDROP_SIZE } from "../../config";
+// Types
+type Props = {
+  backdrop: string;
+};
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<Props>`
   background: ${({ backdrop }) =>
     backdrop ? `url(${IMAGE_BASE_URL}${BACKDROP_SIZE}${backdrop})` : "#000"};
   background-size: cover;
@@ -9,7 +13,7 @@ export const Wrapper = styled.div`
   padding: 40px 20px;
   animation: animateMovieInfo 1s;
 
-  @keyframes {
+  @keyframes animatedMovieInfo {
     from {
       opacity: 0;
     }
