@@ -44,6 +44,7 @@ const Login = () => {
 
   return (
     <Wrapper>
+      {error && <div className="error">Invalid credentials</div>}
       <label>Username:</label>
       <input
         type="text"
